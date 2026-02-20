@@ -1,22 +1,33 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <script>
-        let word = prompt('Enter a word.')
+       function tipRate() {
+        let cost = parseFloat(prompt("What was the cost of your meal?"));
 
-        let num = parseInt(prompt('Enter a number.'));
+        let tip = parseInt(prompt("What do you want your tip precent to be?"));
 
-        let space = '';
+        alert("Your tip is $" + calc(cost, tip) + ".");
+       }
 
-     
+       function calc(cost, tip) {
+        let percent = tip/100;
+        let finalTip = percent*cost;
+
+      
+
+        return finalTip;
+        
+       
+       }
+        
+       
+
+          
+
+        
         
 
-           while (num<0) {
-            document.write(space + word + '<br>');
-             space = space + '&nbsp;'();
-            num++;
-           }
-           
   
         </script>
         <meta charset="UTF-8">
@@ -27,13 +38,13 @@
     </head>
     <body>
         <header>
-
-        </header>
+            
+<button onclick = "tipRate()"></button>        </header>
         <nav>
 
         </nav>
         <main>
-
+         
         </main>
         <footer>
             
