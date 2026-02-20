@@ -2,24 +2,23 @@
 <html lang="en">
     <head>
         <script>
-         let shop = prompt('What chop did you choose')
-        if (shop == 'WCP', 'wcp', 'Web and computer programming') {
-            document.write('Exellent Choice!');
-        }
-        else {
-            document.write(' I hope you made the right choice by selecting, ' + shop + '.')
-        }
-        document.write(' Whatever you chose still, welcome to south tech!')
-//radius = parseInt(prompt('Enter the radius of the cricle'));
-//area = Math.PI*(Math.pow(radius, 2));
-//alert('The area of the cirlce is, ' + area)
+          const songs = new Array(4);
+            const friends = new Array(4);
 
 
-        //alert(Math.floor(Math.random()*10)+1);
-        // alert(Math.PI)
-        // alert('Rounded ' + Math.round(Math.PI))
-        // alert('Floor ' + Math.floor(Math.PI))
-        // alert('Ceiling ' + Math.ceil(Math.PI))
+         
+            for (let i = 1; i<4; i++) {
+             friends [i] = prompt('Enter your first friends name. ' + i + ' out of 4.');
+            songs [i] = prompt('Enter a song they would like.' + i + ' out of 4.');
+
+
+               
+           
+            }
+            for (let i=1;i<(songs.length+friends.length)/2;i++){
+                document.write('your friends name is ' + friends[i] + ' and they song the song ' + songs[i] + '<br>');
+            }
+
 
 
         </script>
