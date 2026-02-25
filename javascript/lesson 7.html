@@ -1,7 +1,8 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <script>
+<<<<<<< HEAD
      
 
         function start() {
@@ -45,12 +46,43 @@
            
    
       </script>
+=======
+       function tipRate() {
+        let cost = parseFloat(prompt("What was the cost of your meal?"));
+
+        let tip = parseInt(prompt("What do you want your tip precent to be?"));
+
+        alert("Your tip is $" + calc(cost, tip) + ".");
+       }
+
+       function calc(cost, tip) {
+        let percent = tip/100;
+        let finalTip = percent*cost;
+
+      
+
+        return finalTip;
+        
+       
+       }
+        
+       
+
+          
+
+        
+        
+
+  
+        </script>
+>>>>>>> ad526a9cf96e3d34628a06e10da533c83b569a98
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <meta name="description" content="">
         <meta name="keywords" content="">
         <title>Template Page</title>
     </head>
+<<<<<<< HEAD
    <body>
     
 
@@ -65,4 +97,20 @@
     
     <button onclick="start()">OK</button>
    </body>
+=======
+    <body>
+        <header>
+            
+<button onclick = "tipRate()"></button>        </header>
+        <nav>
+
+        </nav>
+        <main>
+         
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+>>>>>>> ad526a9cf96e3d34628a06e10da533c83b569a98
 </html>
