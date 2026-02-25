@@ -2,41 +2,67 @@
 <html lang="en">
     <head>
         <script>
-        let word = prompt('Enter a word.')
+     
 
-        let num = parseInt(prompt('Enter a number.'));
+        function start() {
+            let people = document.getElementById("people").value;
+            let slices = document.getElementById("slices").value;
+            let perPerson = document.getElementById("perPerson").value;
 
-        let space = '';
+            document.write(calc(people, slices, perPerson));
+
+        }
+
+        function calc(people, slices, perPerson) {
+            let tPerPerson = slices / people;
+
+            if (isNaN(people) || isNaN(slices) || isNaN(perPerson)) {
+                alert("Please enter a valid number");
+         
+        }
+        else if (people<tPerPerson) {
+            alert("You do not have enough people for each person to have " + perPerson + " slices of pie");
+        }
+    else if (people>=tPerPerson) {
+       return tPerPerson;
+    }
 
      
-        
 
-           while (num<0) {
-            document.write(space + word + '<br>');
-             space = space + '&nbsp;'();
-            num++;
-           }
+            
+
+       
+
+            
+              
+            
+        
+          
+        
            
-  
-        </script>
+              
+            
+           
+   
+      </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <meta name="description" content="">
         <meta name="keywords" content="">
         <title>Template Page</title>
     </head>
-    <body>
-        <header>
+   <body>
+    
 
-        </header>
-        <nav>
-
-        </nav>
-        <main>
-
-        </main>
-        <footer>
-            
-        </footer>
-    </body>
+    <form>
+<p>How many people do you have?</p>
+<input type="text" id="people" name="people">
+<P>How many slices of pie are there?</P>
+<input type="text" id="slices" name="slices">
+<p>How many of slices do you want per person?</p>
+<input type="text" id="perPerson" name="perPerson">
+    </form>
+    
+    <button onclick="start()">OK</button>
+   </body>
 </html>
