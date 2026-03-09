@@ -1,73 +1,13 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <script>
-            function display() {
-                let fruit = document.getElementById("fruit").value;
-                alert(fruit);
 
-                if (fruit=="apple") {
-                    alert("My favorite! I like apples!")
-                }
-                else {
-                    alert("I like " + fruit + " too!")
-                }
-            }
-            let veges = document.getElementsByName("vege");
-            let faVege = "";
-            for (let i=0; i<veges.length; i++) {
-                if (veges[i].checked) {
-                    faVege = veges[i].value;
-                    break;
-                }
-            }
-          alert(faVege);
-
-
-          let activities = "";
-
-          if (document.getElementById("running").checked) {
-              activities += "Running ";
-          }
-          if (document.getElementById("swimming").checked) {
-              activities += "Swimming ";
-          }
-          if (document.getElementById("cycling").checked) {
-              activities += "Cycling ";
-          }
-
-          alert(activities);
         </script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <meta name="description" content="">
-        <meta name="keywords" content="">
-        <title>Template Page</title>
     </head>
     <body>
-        <h1>Healthy Live Style</h1>
-        <p>Favorite Fruit:
-        <select id="fruit" name="fruit">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="orange">Orange</option>
-            <option vlue="pinapple">Pineapple</option>
-        </select>
+        <p>How much was your meal?
+            <input type="text" id="amount">
         </p>
-        <p>
-            Favorite Vegetable:<br>
-            <input type="radio" name="vege" value="peas" id="peas">Peas<br>
-            <input type="radio" name="vege" value="carrots" id="carrots">Carrots<br>
-            <input type="radio" name="vege" value="broccoli" id="broccoli">Broccoli<br>
-        </p>
-        <p>Favorite Activity:<br>
-        <input type="checkbox" name="activity" value="running" id="running">Running<br>
-        <input type="checkbox" name="activity" value="swimming" id="swimming">Swimming<br>
-        <input type="checkbox" name="activity" value="cycling" id="cycling">Cycling<br>
-        </p>
-        <button onclick="display()">Submit</button>
-        
-
-            
     </body>
 </html>
