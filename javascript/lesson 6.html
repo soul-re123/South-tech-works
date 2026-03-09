@@ -2,25 +2,41 @@
 <html lang="en">
     <head>
         <script>
-          const songs = new Array(4);
-            const friends = new Array(4);
+            function display() {
+                let fruit = document.getElementById("fruit").value;
+                alert(fruit);
 
-
-         
-            for (let i = 1; i<4; i++) {
-             friends [i] = prompt('Enter your first friends name. ' + i + ' out of 4.');
-            songs [i] = prompt('Enter a song they would like.' + i + ' out of 4.');
-
-
-               
-           
+                if (fruit=="apple") {
+                    alert("My favorite! I like apples!")
+                }
+                else {
+                    alert("I like " + fruit + " too!")
+                }
             }
-            for (let i=1;i<(songs.length+friends.length)/2;i++){
-                document.write('your friends name is ' + friends[i] + ' and they song the song ' + songs[i] + '<br>');
+            let veges = document.getElementsByName("vege");
+            let faVege = "";
+            for (let i=0; i<veges.length; i++) {
+                if (veges[i].checked) {
+                    faVege = veges[i].value;
+                    break;
+                }
             }
+          alert(faVege);
 
 
+          let activities = "";
 
+          if (document.getElementById("running").checked) {
+              activities += "Running ";
+          }
+          if (document.getElementById("swimming").checked) {
+              activities += "Swimming ";
+          }
+          if (document.getElementById("cycling").checked) {
+              activities += "Cycling ";
+          }
+
+          alert(activities);
         </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,18 +45,29 @@
         <title>Template Page</title>
     </head>
     <body>
-        <head>
- <header>
+        <h1>Healthy Live Style</h1>
+        <p>Favorite Fruit:
+        <select id="fruit" name="fruit">
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+            <option vlue="pinapple">Pineapple</option>
+        </select>
+        </p>
+        <p>
+            Favorite Vegetable:<br>
+            <input type="radio" name="vege" value="peas" id="peas">Peas<br>
+            <input type="radio" name="vege" value="carrots" id="carrots">Carrots<br>
+            <input type="radio" name="vege" value="broccoli" id="broccoli">Broccoli<br>
+        </p>
+        <p>Favorite Activity:<br>
+        <input type="checkbox" name="activity" value="running" id="running">Running<br>
+        <input type="checkbox" name="activity" value="swimming" id="swimming">Swimming<br>
+        <input type="checkbox" name="activity" value="cycling" id="cycling">Cycling<br>
+        </p>
+        <button onclick="display()">Submit</button>
+        
 
- </header>
-        <nav>
-
-        </nav>
-        <main>
-
-        </main>
-        <footer>
             
-        </footer>
     </body>
 </html>
