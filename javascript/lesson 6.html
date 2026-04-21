@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            .hide {
+                display: none;
+            }
+        </style>
         <script>
+            let size = document.getElementsByName("size");
+            let pickup = document.getElementsByName("pickup");
+            let toppings = document.getElementsByName("topping");
 
+            function show() {
+                document.getElementById("del").innerHTML.style.display = "block";
+            }
         </script>
     </head>
     <body>
-        <p>How much was your meal?<br>
-            <input type="text" id="amount">
-        </p>
-        <select>
-            <option>Outstanding 30%</option>
-            <option >Good 20%</option>
-        </select>
+        <h1>Cian's Pizza Parlor</h1>
+
+        <form>
+            <p>Step 1: Please select the pizza size:<br>
+                <input type="radio" name="size" required>Small $9.75
+                <input type="radio" name="size">Medium $12.25
+                <input type="radio" name="size">Large $14.50
+                <br><br><br>
+
+                Step 2: Select your pizza toppings&lpar;$1.15 per topping&rpar; <br>
+                <input type="checkbox" id="peperonni" name="topping">Pepperoni 
+                <input type="checkbox" id="cBacon"  name="topping"> Canadian Bacon
+                <input type="checkbox" id="sausage"  name="topping"> Sausage<br>
+                <input type="checkbox" id="mushrooms"  name="topping"> Mushrooms
+                <input type="checkbox" id="pineapple"  name="topping">Pineapple
+                <input type="checkbox" id="bOlives"  name="topping">Black Olives
+
+                <hr>
+
+                <br><br><br>
+                Step 3: How would you like to get your pizza:<br>
+                <input type="radio" name="pickup" required checked>Pickup
+                <input type="radio" name="pickup" onclick="show()">Delivery
+                <br><br><br>
+
+                Step 4: Personal Information: <br>
+               Name: <input type="text" name="name" id="name"><br>
+               Phone: <input type="number" name="phone" id="phone">
+               <br><br><br>
+
+               <div class="hide" id="del">
+                Address: <input type="text" id="address" name="address" required><br>
+                City: <input type="text" id="city" name="city" required>
+                 State: <input type="text" id="state" name="state" required>
+                 Zip: <input type="text" id="zip" name="zip" required>
+               </div>
+
+               <input type="submit" value="submit"> <input type="reset" value="reset form">
+               
+
+
+
+
+
+            </p>
+        </form>
     </body>
 </html>

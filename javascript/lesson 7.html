@@ -1,91 +1,21 @@
-<DOCTYPE html>
-<html lang="en">
-    <head>
-       <style>
-        #box {
-          width: 50px;
-          height: 50px;
-          background-color: blue;
-          position: relative;
-          left: 0px;
-          top: 0px;
-        }
-       </style>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <meta name="description" content="">
-        <meta name="keywords" content="">
-        <title>Template Page</title>
-    </head>
-   <body>
- <div id="dashboard">
-  <h2>Mission Status: <span id="status">Exploring</span></h2>
-  <p>Distance: <span id="distance">0</span> / 100 miles</p>
-  <p id="battery-box">Battery: <span id="battery">100</span>%</p>
-  <p>Oxygen: <span id="oxygen">100</span>%</p>
-  
-  <button onclick="moveForward()">Move Forward</button>
-  <button onclick="recharge()">Recharge Solar</button>
-  <button onclick="repair()">Repair Systems</button>
-</div>
-  <script>
-let distanceTraveled = 0;
-let batteryLife = 100;
-let oxygenLevel = 100;
-let missionStatus = "Exploring";
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+     
+     
+    </style>
 
-function updateUI() {
-  document.getElementById("distance").innerText = distanceTraveled;
-  document.getElementById("battery").innerText = batteryLife;
-  document.getElementById("oxygen").innerText = oxygenLevel;
-  document.getElementById("status").innerText = missionStatus;
+  </head>
+  <body>
+<P id="results"></P>
 
- 
-  const batteryBox = document.getElementById("battery-box");
-  batteryBox.style.backgroundColor = batteryLife < 20 ? "red" : "transparent";
-  
-  checkStatus();
-}
 
-function moveForward() {
-  if (missionStatus !== "Exploring") return;
-  distanceTraveled += 10;
-  batteryLife -= 15;
-  oxygenLevel -= 5;
-  updateUI();
-}
-
-function recharge() {
-  if (missionStatus !== "Exploring") return;
-  batteryLife = Math.min(100, batteryLife + 20);
-  oxygenLevel -= 10;
-  updateUI();
-}
-
-function repair() {
-  if (missionStatus !== "Exploring") return;
-  batteryLife -= 25;
- 
-  oxygenLevel = Math.min(100, oxygenLevel + 30);
-  updateUI();
-}
-
-function checkStatus() {
-  if (batteryLife <= 0 || oxygenLevel <= 0) {
-    missionStatus = "Mission Failed: Critical Failure!";
-    endGame();
-  } else if (distanceTraveled >= 100) {
-    missionStatus = "Mission Success: Mars Reached!";
-    endGame();
-  }
-}
-
-function endGame() {
-  document.getElementById("status").innerText = missionStatus;
- 
-  document.querySelectorAll("button").forEach(btn => btn.disabled = true);
-}
+    <script>
+      rate = 5.99;
+      document.getElementById("results").innerHTML = parseInt("22 23") + parseFloat(" 25.99 is the price") + parseInt(" The cat is 10") + rate.toFixed(1);
+      alert(rate);
     </script>
-
-   </body>
+    
+  </body>
 </html>

@@ -1,39 +1,56 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <style>
- #mountain{
-    color: green;
- }
- #Beach{
-    color: blue;
- }
-    </style>
-<title>Vacation</title>
-<meta charset="UTF-8">
-<meta name="description" content="">
-<meta name="Keywords" content="">
-</head>
-<body>
-    <header>
-<h1>Vacation</h1>
-<hr>
-    </header>
-    <nav>
-     
-    </nav>
-    <main>
-        <h2 id="mountain">Mountains</h2>
-        <p>Mountains are pretty cool, my favorite in the US are the Smoky Mountains.</p>
-        <h2 id="Beach">Beaches</h2>
-        <p>I love to lie on the sand and listen to waves.</p>
-    </main>
-    <footer>
+    <head>
 
-    </footer>
+    </head>
+    <body>
+
+<h1 id="question"></h1>
+<input type="number" id="answer">
+<button onclick="game()">Start</button>
+<script>
+     let num1 = Math.floor(Math.random()*10)+1;
+     let num2 = Math.floor(Math.random()*10)+1;
+
+    let sum = num1+num2;
+    let ctr = 0;
+
+            
+
+     document.getElementById('question').textContent= "What is " + num1 + " + " + num2 + "?";
+    function game() {
+        
+           
+
+            let answer = document.getElementById("answer").value;
+            ctr++;
+             if (answer==sum) {
+                alert("Congrats you win!");
+                 
+             }
+            else {
+                if(ctr==3){
+                    alert("You guessed three times. You lost.")
+                return;
+                    
+                  
+             }
+            else{
+                  alert("So sorry but that is wrong! Please try again!");
+            }}
+        }
+           
+
+           
+        
     
-</body>
+    
 
 
+
+
+
+</script>
+
+    </body>
 </html>
