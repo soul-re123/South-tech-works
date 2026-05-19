@@ -1,12 +1,4 @@
-h1:first-letter {
-    font-size: 30px;
-}
-h1 {
-    font-size: 20px;
-}
-img {
-    float: left;
-}
+
  header h2{
     text-indent: 25px;
     color: orange;
@@ -14,17 +6,94 @@ img {
     text-shadow:  black 1.5px 1.5px 3px;
 
 }
+main {
+    float: right;
+}
 h3 {
     text-indent: 110px;
 }
 html {
     font-family: sans-serif;
+    background-image: url(../images/bats.gif);
 }
 a {
     color: orange;
     font-weight: bold;
 }
-footer {
+header {
+    background: linear-gradient(45deg,rgba(255, 255, 255, 1) 0%, rgba(255, 165, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+
+}
+footer6 {
     text-align: center;
     font-size: 12px;
+      background-image: linear-gradient(45deg black orange white);
+}
+body {
+   border: 2px solid black;
+   height: 750px;
+   width: 800px;
+   margin: 0 auto;
+ background-color: white;
+}
+hr {
+    border: 2px solid, black;
+}
+.orange{
+    text-decoration: underline;
+    color: orange;
+    font-weight: bold;;
+}
+p {
+    clear: both;
+}
+ul {
+    float: left;
+    padding: 20px;
+}
+section {
+       margin: 0 auto;
+    height: 550px;
+    width: 75%;
+    float: right;
+ 
+}
+section:first-letter {
+    font-size: 30px;
+}
+h1:first-letter {
+    font-size: 50px;
+}
+h1 {
+    font-size: 50px;
+}
+img {
+    float: left;
+}
+section h1 {
+    font-size: 20px;;
+}
+li a {
+     width: 100px;
+     border: 2px solid black;
+    margin: .5em;
+     padding: .5em;
+     display: block;
+     background-color: darkorange;
+     color: black;
+     text-align: center;
+}
+aside {
+    width: auto;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+aside a {
+    color: white;
+     margin-right: 1em;
+}
+ul li {
+        list-style-type: none;
 }

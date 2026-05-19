@@ -39,21 +39,28 @@ h1 {
     font-size: 75px;
     color: black;
 }
- details>a {
+p a {
     font-size: 20px;
-    text-decoration: underline;
+}
+section {
+    height: 200px;
+    width: 450px;
+    border: solid, black;
+    text-align: center;
+}
+section a {
     color: blue;
-}
-details>a:visited {
-    color: purple;
-}
-p>a {
-    font-size: 20px;
     text-decoration: underline;
-    color: blue;
-
 }
-p>a:visited {
-    color: purple;
+details {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 50px;
 }
-
+details[open] {
+    max-height: 500px;
+}
+details[closed] {
+    max-height: 0px;
+    visibility: visible;
+}

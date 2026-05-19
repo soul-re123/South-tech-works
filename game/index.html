@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Gacha Pull</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background: #f0f0f0;
+            text-align: center;
+        }
+        .hidden { display: none; }
+        .flip { transform: scaleX(-1); }
+        img { max-width: 250px; border-radius: 10px; margin: 10px; }
+        .shake { animation: shake 0.5s infinite; }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30% { transform: translate3d(-4px, 0, 0); }
+        }
+       
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="display-area">
+        <h1 id="status">Brainrot Gacha</h1>
+        <img src="images/confetti.gif" alt="" class="hidden" id="confetti1">
+        <img src="images/dino.jpg" alt="dino" id="main-img">
+        <img src="images/confetti.gif" alt="" class="flip hidden" id="confetti2">
+    </div>
+    <br>
+    <button onclick="pull()" id="pull-btn" style="padding: 10px 20px; cursor:pointer;">pull</button>
+    <button onclick="location.reload()" id="reset-btn" class="hidden" style="padding: 10px 20px;">Try Again</button>
+</div>
+
+<script>
+function pull() {
+    let roll = Math.floor(Math.random() * 100) + 1;
+    let imgElement = document.getElementById('main-img');
+    let statusText = document.getElementById('status');
+    let pullBtn = document.getElementById('pull-btn');
+    let resetBtn = document.getElementById('reset-btn');
+
+    
+    pullBtn.style.display = "none";
+    resetBtn.classList.remove('hidden');
+
+    if (roll === 1) {
+        statusText.innerHTML = " MYTHIC PULL ";
+        imgElement.src = "images/sahur.jpg";
+    } 
+    else if (roll >= 2 && roll <= 52) {
+        statusText.innerHTML = "COMMON PULL";
+        imgElement.src = "images/shark.jpg";
+    } 
+    else if (roll > 52 && roll <= 70) {
+        statusText.innerHTML = "RARE PULL";
+        imgElement.src = "images/coffee.jpg";
+    } 
+    else {
+        
+        statusText.innerHTML = " EPIC PULL ";
+        imgElement.src = "images/sixSeven.gif";
+        
+    
+        document.getElementById("confetti1").classList.remove('hidden');
+        document.getElementById("confetti2").classList.remove('hidden');
+        
+        
+        let audio = new Audio("audio/67.mp3");
+        audio.play().catch(e => console.log("Audio need user interaction first"));
+    }
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
